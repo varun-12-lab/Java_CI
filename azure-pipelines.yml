@@ -19,7 +19,7 @@ stages:
   jobs:
     - job: DevFist
       steps:
-      - bash: echo $(environment)DeployJob
+      - bash: echo $(environment)
     - job: DevSeccond
       steps:
       - bash: echo Dev Second Job
@@ -30,7 +30,7 @@ stages:
   jobs:
     - job: QAJob
       steps:
-      - bash: echo $(environment)QADeploy
+      - bash: echo $(environment)
 - stage: ProdDeploy
   dependsOn:
   - DevDeploy
@@ -38,4 +38,4 @@ stages:
   jobs:
     - job: ProductionsJob
       steps:
-      - bash: echo $(environment)ProdDeploy
+      - bash: echo $(environment)
