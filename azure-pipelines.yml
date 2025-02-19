@@ -24,8 +24,6 @@ stages:
       steps:
       - bash: echo Dev Second Job
 - stage: QADeploy
-  variables:
-     environment: 
   dependsOn: Build
   jobs:
     - job: QAJob
